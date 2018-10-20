@@ -1,0 +1,242 @@
+[
+  {
+    "name": "post",
+    "description": "fetch data from the table: \"post\"",
+    "args": [
+      {
+        "name": "limit",
+        "description": "limit the nuber of rows returned",
+        "type": {
+          "kind": "SCALAR",
+          "name": "Int",
+          "ofType": null,
+          "__typename": "__Type"
+        },
+        "defaultValue": null,
+        "__typename": "__InputValue"
+      },
+      {
+        "name": "offset",
+        "description": "skip the first n rows. Use only with order_by",
+        "type": {
+          "kind": "SCALAR",
+          "name": "Int",
+          "ofType": null,
+          "__typename": "__Type"
+        },
+        "defaultValue": null,
+        "__typename": "__InputValue"
+      },
+      {
+        "name": "order_by",
+        "description": "sort the rows by one or more columns",
+        "type": {
+          "kind": "LIST",
+          "name": null,
+          "ofType": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "ENUM",
+              "name": "post_order_by",
+              "ofType": null,
+              "__typename": "__Type"
+            },
+            "__typename": "__Type"
+          },
+          "__typename": "__Type"
+        },
+        "defaultValue": null,
+        "__typename": "__InputValue"
+      },
+      {
+        "name": "where",
+        "description": "filter the rows returned",
+        "type": {
+          "kind": "INPUT_OBJECT",
+          "name": "post_bool_exp",
+          "ofType": null,
+          "__typename": "__Type"
+        },
+        "defaultValue": null,
+        "__typename": "__InputValue"
+      }
+    ],
+    "type": {
+      "kind": "NON_NULL",
+      "name": null,
+      "ofType": {
+        "kind": "LIST",
+        "name": null,
+        "ofType": {
+          "kind": "NON_NULL",
+          "name": null,
+          "ofType": {
+            "kind": "OBJECT",
+            "name": "post",
+            "ofType": null,
+            "__typename": "__Type"
+          },
+          "__typename": "__Type"
+        },
+        "__typename": "__Type"
+      },
+      "__typename": "__Type"
+    },
+    "isDeprecated": false,
+    "deprecationReason": null,
+    "__typename": "__Field"
+  },
+  {
+    "name": "post_by_pk",
+    "description": "fetch data from the table: \"post\" using primary key columns",
+    "args": [
+      {
+        "name": "id",
+        "description": null,
+        "type": {
+          "kind": "NON_NULL",
+          "name": null,
+          "ofType": {
+            "kind": "SCALAR",
+            "name": "Int",
+            "ofType": null,
+            "__typename": "__Type"
+          },
+          "__typename": "__Type"
+        },
+        "defaultValue": null,
+        "__typename": "__InputValue"
+      }
+    ],
+    "type": {
+      "kind": "OBJECT",
+      "name": "post",
+      "ofType": null,
+      "__typename": "__Type"
+    },
+    "isDeprecated": false,
+    "deprecationReason": null,
+    "__typename": "__Field"
+  },
+  {
+    "name": "user",
+    "description": "fetch data from the table: \"user\"",
+    "args": [
+      {
+        "name": "limit",
+        "description": "limit the nuber of rows returned",
+        "type": {
+          "kind": "SCALAR",
+          "name": "Int",
+          "ofType": null,
+          "__typename": "__Type"
+        },
+        "defaultValue": null,
+        "__typename": "__InputValue"
+      },
+      {
+        "name": "offset",
+        "description": "skip the first n rows. Use only with order_by",
+        "type": {
+          "kind": "SCALAR",
+          "name": "Int",
+          "ofType": null,
+          "__typename": "__Type"
+        },
+        "defaultValue": null,
+        "__typename": "__InputValue"
+      },
+      {
+        "name": "order_by",
+        "description": "sort the rows by one or more columns",
+        "type": {
+          "kind": "LIST",
+          "name": null,
+          "ofType": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "ENUM",
+              "name": "user_order_by",
+              "ofType": null,
+              "__typename": "__Type"
+            },
+            "__typename": "__Type"
+          },
+          "__typename": "__Type"
+        },
+        "defaultValue": null,
+        "__typename": "__InputValue"
+      },
+      {
+        "name": "where",
+        "description": "filter the rows returned",
+        "type": {
+          "kind": "INPUT_OBJECT",
+          "name": "user_bool_exp",
+          "ofType": null,
+          "__typename": "__Type"
+        },
+        "defaultValue": null,
+        "__typename": "__InputValue"
+      }
+    ],
+    "type": {
+      "kind": "NON_NULL",
+      "name": null,
+      "ofType": {
+        "kind": "LIST",
+        "name": null,
+        "ofType": {
+          "kind": "NON_NULL",
+          "name": null,
+          "ofType": {
+            "kind": "OBJECT",
+            "name": "user",
+            "ofType": null,
+            "__typename": "__Type"
+          },
+          "__typename": "__Type"
+        },
+        "__typename": "__Type"
+      },
+      "__typename": "__Type"
+    },
+    "isDeprecated": false,
+    "deprecationReason": null,
+    "__typename": "__Field"
+  },
+  {
+    "name": "user_by_pk",
+    "description": "fetch data from the table: \"user\" using primary key columns",
+    "args": [
+      {
+        "name": "id",
+        "description": null,
+        "type": {
+          "kind": "NON_NULL",
+          "name": null,
+          "ofType": {
+            "kind": "SCALAR",
+            "name": "Int",
+            "ofType": null,
+            "__typename": "__Type"
+          },
+          "__typename": "__Type"
+        },
+        "defaultValue": null,
+        "__typename": "__InputValue"
+      }
+    ],
+    "type": {
+      "kind": "OBJECT",
+      "name": "user",
+      "ofType": null,
+      "__typename": "__Type"
+    },
+    "isDeprecated": false,
+    "deprecationReason": null,
+    "__typename": "__Field"
+  }
+]

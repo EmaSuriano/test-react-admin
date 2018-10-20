@@ -8,7 +8,7 @@ export const buildQueryFactory = (
   getResponseParserImpl,
 ) => introspectionResults => {
   const knownResources = introspectionResults.resources.map(r => r.type.name);
-
+  debugger;
   return (aorFetchType, resourceName, params) => {
     const resource = introspectionResults.resources.find(
       r => r.type.name === resourceName,

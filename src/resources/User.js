@@ -91,7 +91,7 @@ export const UserCreate = props => (
 
 export default {
   list: UserList,
-  edit: UserEdit,
-  show: UserShow,
-  create: UserCreate,
+  // edit: UserEdit,
+  // show: UserShow,
+  // create: UserCreate,
 };

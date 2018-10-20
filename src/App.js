@@ -6,6 +6,11 @@ import { Admin, Resource } from 'react-admin';
 import UserActions from './resources/User';
 import PostActions from './resources/Post';
 
+const GRAPH_COOL_API =
+  'https://api.graph.cool/simple/v1/cjnhbz0dg5kut0115hzroup9o';
+const HASURA_API =
+  'https://hasura-hacktoberfest-app.herokuapp.com/v1alpha1/graphql';
+
 class App extends Component {
   constructor() {
     super();
@@ -14,7 +19,7 @@ class App extends Component {
   componentDidMount() {
     buildGraphcoolProvider({
       clientOptions: {
-        uri: 'https://api.graph.cool/simple/v1/cjnhbz0dg5kut0115hzroup9o',
+        uri: HASURA_API,
       },
     }).then(dataProvider => this.setState({ dataProvider }));
   }
@@ -28,8 +33,8 @@ class App extends Component {
 
     return (
       <Admin dataProvider={dataProvider}>
-        <Resource name="User" {...UserActions} />
-        <Resource name="Post" {...PostActions} />
+        <Resource name="user" {...UserActions} />
+        {/* <Resource name="Post" {...PostActions} /> */}
       </Admin>
     );
   }
