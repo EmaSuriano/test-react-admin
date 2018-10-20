@@ -1,26 +1,36 @@
+// in App.js
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import buildGraphcoolProvider from './adapter';
+import { Admin, Resource } from 'react-admin';
+
+import UserActions from './resources/User';
+import PostActions from './resources/Post';
 
 class App extends Component {
+  constructor() {
+    super();
+    this.state = { dataProvider: null };
+  }
+  componentDidMount() {
+    buildGraphcoolProvider({
+      clientOptions: {
+        uri: 'https://api.graph.cool/simple/v1/cjnhbz0dg5kut0115hzroup9o',
+      },
+    }).then(dataProvider => this.setState({ dataProvider }));
+  }
+
   render() {
+    const { dataProvider } = this.state;
+
+    if (!dataProvider) {
+      return <div>Loading</div>;
+    }
+
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+      <Admin dataProvider={dataProvider}>
+        <Resource name="User" {...UserActions} />
+        <Resource name="Post" {...PostActions} />
+      </Admin>
     );
   }
 }
